@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Group 4 Shopping List</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form action="" id="cart" method="post">
-        <label for="cartItem">Enter shopping to list</label>
-        <input type="text" id="cartItem">
-        <input type="submit" value="add">
-    </form>
+    <div class="container">
+        <h1>Group 4 Shopping List</h1>
 
-    <div>
-        <ul id="shoppingList"></ul>
+        <form id="cart">
+            <label for="cartItem">Enter shopping item</label>
+            <input type="text" id="cartItem" placeholder="E.g., Apples, Bread, Milk">
+            <input type="submit" value="Add">
+        </form>
+
+        <div class="list">
+            <ul id="shoppingList"></ul>
+            <button id="clear">Clear List</button>
+        </div>
     </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
