@@ -9,17 +9,17 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 function buildCart(list){
     let item = document.createElement('li')
-    item.setAttribute('id','item')
     let btn = document.createElement('button')
-    btn.addEventListener('click', handleDelete)
-    btn.textContent = 'x'
+    btn.addEventListener('click', handleDone)
+    btn.textContent = 'Purchased'
     item.textContent = `${list} `
     item.appendChild(btn)
     console.log(item)
     document.querySelector('#shoppingList').appendChild(item)
 }
 
-function handleDelete(e){
-    e.target.item.style.text-decoration: line-through;
-    e.target.item.setBgRed()
+function handleDone(e){
+    let item = e.target.parentElement;
+    item.style.textDecoration = 'line-through';
+    item.style.backgroundColor = 'red';
 }
