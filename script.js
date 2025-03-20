@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
 
         buildCart(e.target.cartItem.value)
-        saveData();
+        // saveData();
         form.reset()
     })
 });
@@ -55,9 +55,9 @@ function handleEdit(e){
         alert('Please enter an item before adding.');
         return;
     }
-    saveData();
+    // saveData();
     item.firstChild.textContent = newText;
 }
-function saveData() {localStorage.setItem("data",shoppingList.innerHTML);}
-function showTask(){shoppingList.innerHTML = localStorage.getItem("data");}
-showTask();
+// function saveData() {localStorage.setItem("data",shoppingList.innerHTML);}
+// function showTask(){shoppingList.innerHTML = localStorage.getItem("data");}
+// showTask();
