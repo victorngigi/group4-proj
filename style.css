@@ -1,16 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-.container{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    margin: 0 100px;
-    background-color: antiquewhite;
-    text-align: center;
-}
-.list{
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-btn{
-    width: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px grey;
+  }
+h1{
+    font-weight: 800;
+    color: #333;    
+}
+form{
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+input[type="submit"]:hover{
+    background-color: #e68900;
+}
+
+
+input[type="text"]{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+li{
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px gray;
+    transition: 0.3s ease-in-out;
+}
+li:hover{
+    transform: scale(1.02);
+}
+label{
+    font-size: 16px;
+}
+button{
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    color: #ff9800;
+}
+#clear{
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#clear:hover{
+    background-color: #c9302c;
 }

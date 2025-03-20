@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', () =>{
     let form = document.querySelector('form')
     form.addEventListener('submit', (e) => {
         e.preventDefault()
+        let inputValue = e.target.cartItem.value.trim();
+        
+        if (inputValue === '') {
+            alert('Please enter an item before adding.');
+            return;
+        }
+
         buildCart(e.target.cartItem.value)
+        saveData();
         form.reset()
     })
 });
@@ -18,8 +26,8 @@ function buildCart(list){
     addBtn.addEventListener('click', handleDone)
     editBtn.addEventListener('click', handleEdit)
 
-    addBtn.textContent = 'Purchased'
-    editBtn.textContent = 'edit'
+    addBtn.textContent = '☑'
+    editBtn.textContent = '✎'
 
     item.textContent = `${list} `
     item.appendChild(addBtn)
@@ -42,5 +50,14 @@ function handleClear(e){
 function handleEdit(e){
     let item = e.target.parentElement;
     let newText = prompt('Edit your item:', item.firstChild.textContext)
+    let inputValue = newText.trim()
+    if (inputValue === '') {
+        alert('Please enter an item before adding.');
+        return;
+    }
+    saveData();
     item.firstChild.textContent = newText;
 }
+function saveData() {localStorage.setItem("data",shoppingList.innerHTML);}
+function showTask(){shoppingList.innerHTML = localStorage.getItem("data");}
+showTask();
